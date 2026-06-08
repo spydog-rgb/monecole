@@ -1,0 +1,47 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --jade:  #D4537E;
+  --hugo:  #1D9E75;
+  --brand: #534AB7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f8f8f6;
+  min-height: 100vh;
+}
+
+/* Scrollbar thin */
+::-webkit-scrollbar       { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+
+/* Progress bar animated */
+.progress-fill { transition: width 0.4s ease; }
+
+/* Dot loading animation */
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%            { transform: translateY(-6px); }
+}
+.dot-bounce span { animation: bounce 1.2s infinite; display: inline-block; }
+.dot-bounce span:nth-child(2) { animation-delay: .2s; }
+.dot-bounce span:nth-child(3) { animation-delay: .4s; }
+
+/* Card hover */
+.card-hover { transition: border-color .15s, box-shadow .15s; }
+.card-hover:hover { border-color: #534AB7 !important; }
+
+/* Speech button pulse */
+@keyframes pulse-ring {
+  0%   { transform: scale(1);    opacity: .6; }
+  100% { transform: scale(1.35); opacity: 0;  }
+}
+.pulse-ring { animation: pulse-ring .9s ease-out infinite; }
